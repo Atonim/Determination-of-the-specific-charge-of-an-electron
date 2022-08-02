@@ -1,0 +1,634 @@
+.all {
+  background: linear-gradient(black, rgb(0, 0, 85));
+}
+
+/*_______________________________________________________________________
+*************************************************************************
+*************************************************************************
+                                HEADER
+*************************************************************************
+*************************************************************************
+_______________________________________________________________________*/
+.header {
+  min-width: 1400px;
+}
+
+.grid_container {
+  
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: whitesmoke;
+  background-color: #242582;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.grid_item {
+  grid-row: 1/3;
+  justify-self: center;
+  min-width: 200px;
+}
+
+.grid_item_kaf {
+  grid-row: 1/2;
+}
+
+.grid_item_button {
+  grid-row: 2/3;
+}
+
+.ETU_circle {
+  height: 130px;
+  margin-top: 10px;
+}
+
+.kaf_circle {
+  max-height: 82px;
+}
+
+.right_bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang {
+  height: 100%;
+  padding: 0px 15px;
+  align-self: center;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* a:link{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+} */
+
+h1 {
+  text-align: center;
+}
+
+.prog_info_button {
+  position: relative;
+  visibility: hidden;
+  margin-top: 35px;
+}
+
+.prog_info_button_label {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.prog-info-inf {
+  visibility: hidden;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 15;
+  margin-left: 10px;
+}
+
+.prog_info_button:checked~.prog-info-inf {
+  visibility: visible;
+}
+
+/*_______________________________________________________________________
+  *************************************************************************
+  *************************************************************************
+                                  MAIN
+  *************************************************************************
+  *************************************************************************
+  _______________________________________________________________________*/
+
+.main_background {
+
+  display: grid;
+  grid-template-columns: auto 1400px auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+
+}
+
+.dome {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.helmholtz {
+  fill: url(#RadialGradient1);
+
+}
+
+.helmholtz_coil {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 340px;
+}
+
+.installation {
+  display: inline-block;
+}
+
+.back_dashboard {
+  min-width: 1400px;
+  position: relative;
+}
+
+.grid_dashboard {
+  display: grid;
+  background-color: gray;
+  grid-template-columns: 315px 350px 350px 315px;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 10px;
+  justify-content: center;
+  border: 10px solid black;
+  color: whitesmoke;
+
+}
+
+.container {
+  display: flex;
+}
+
+.dashboard_h {
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+
+.power_dashboard_h {
+  margin-top: 25px;
+}
+
+.dashboard_power_panel_powerbutton {
+  justify-self: end;
+}
+
+.amp_img,
+.volt_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid black;
+  width: 300px;
+}
+
+.dashboard_central_panel_img,
+.dashboard_right_panel_img {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  width: 150px;
+}
+
+.slider[type=range]:focus {
+  outline: none;
+}
+
+.meter {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 320px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.meter-clock1 {
+  transform: rotate(-53deg);
+  transform-origin: 160px 185px;
+  fill: red;
+  transition-duration: 0.5s;
+}
+
+.meter-circle {
+
+  fill: black;
+}
+
+.meter-clock2 {
+  transform: rotate(-53deg);
+  transform-origin: 160px 185px;
+  fill: red;
+  transition-duration: 0.5s;
+}
+
+.meter-circle2 {
+
+  fill: black;
+}
+
+/*_______________________________________________________________________
+  *************************************************************************
+  *************************************************************************
+                                  SLIDERS
+  *************************************************************************
+  *************************************************************************
+  _______________________________________________________________________*/
+.slider {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 250px;
+  margin-top: 50px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 20px;
+  background: linear-gradient(to right, black, black);
+  background-size: 240px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+}
+
+/*понятно из названия*/
+.slider[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+/*Сама пимпочка*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: gold;
+  border-radius: 25px;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/*НАДПИСИ ПОД БЕГУНКАМИ*/
+
+.white_line {
+  height: 2px;
+  width: 260px;
+  background-color: whitesmoke;
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul.range_labels {
+  margin: 0 auto;
+  display: flex;
+  /* Значение полей */
+  color: whitesmoke;
+  padding-left: 10px;
+  justify-content: space-between;
+  width: 260px;
+}
+
+ul.range_labels li {
+  display: inline;
+  /* Отображать как строчный элемент */
+  margin-right: 5px;
+}
+
+/*_______________________________________________________________________
+  *************************************************************************
+  *************************************************************************
+                                  SWITCH-BUTTON
+  *************************************************************************
+  *************************************************************************
+  _______________________________________________________________________*/
+
+.deflecting_voltage_switch {
+  position: relative;
+  margin-left: auto;
+  margin-right: 40px;
+  width: 80px;
+  height: 75px;
+  z-index: 1;
+}
+
+.deflecting_voltage_switch input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.amperage_direction_switch input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.amperage_direction_switch {
+  position: relative;
+  width: 80px;
+  height: 75px;
+  margin-right: 20px;
+  margin-left: 16px;
+  z-index: 1;
+}
+
+.switcher-1 {
+  /*область, привязанная к input-radio (нажимая сюда, выбираем radio 1)*/
+  cursor: pointer;
+  width: 100%;
+  height: 33.3%;
+  top: 10px;
+  /* = border*/
+}
+
+.switcher-2 {
+  /*область, привязанная к input-radio (нажимая сюда, выбираем radio 2)*/
+  cursor: pointer;
+  width: 100%;
+  height: 33.3%;
+  top: 33.3%;
+  padding-top: 10px;
+}
+
+.switcher-3 {
+  /*область, привязанная к input-radio (нажимая сюда, выбираем radio 3)*/
+  cursor: pointer;
+  width: 100%;
+  height: 33.3%;
+  top: 66.6%;
+  padding-top: 10px;
+}
+
+.switcher-label {
+  /* для всех привязаных областей задаём способ отображения */
+  position: absolute;
+  text-indent: -9999px;
+  z-index: 2;
+  left: 10px;
+}
+
+.switcher-label-vis {
+  margin: 10px;
+}
+
+.switcher-slider {
+  /*начальный бэкграунд*/
+  height: 100%;
+  width: 100%;
+  background-color: rgb(40, 40, 40);
+  border-radius: 1px;
+  border: 10px solid rgb(15, 15, 15);
+  padding: 2%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1) inset, 0 0 4px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 1px rgba(0, 0, 0, 0.3) inset;
+}
+
+.switcher-slider:after {
+  /*сам бегунок*/
+  transition: top 0.2s linear 0s, bottom 0.2s linear 0s;
+  position: absolute;
+  margin-top: 10px;
+  content: "";
+  border-radius: 2px;
+  width: 96%;
+  height: 33.3%;
+  top: 33.3%;
+  padding: 2%;
+  background-color: rgb(75, 75, 75);
+}
+
+.switcher-radio-1:checked~.switcher-slider {
+  background-color: rgb(40, 40, 40);
+}
+
+.switcher-radio-2:checked~.switcher-slider {
+  background-color: rgb(40, 40, 40);
+}
+
+.switcher-radio-3:checked~.switcher-slider {
+  background-color: rgb(40, 40, 40);
+}
+
+.switcher-radio-1:checked~.switcher-slider:after {
+  top: 10px;
+  margin-top: 2px;
+}
+
+.switcher-radio-2:checked~.switcher-slider:after {
+  top: 33.3%;
+  margin-top: 10px;
+}
+
+.switcher-radio-3:checked~.switcher-slider:after {
+  top: 66.6%;
+  margin-top: 10px;
+}
+
+/*_______________________________________________________________________
+  *************************************************************************
+  *************************************************************************
+                                  POWER-BUTTON
+  *************************************************************************
+  *************************************************************************
+  _______________________________________________________________________*/
+
+.power_switch {
+  position: relative;
+  width: 45px;
+  height: 60px;
+  text-align: center;
+  z-index: 1;
+}
+
+.power_switch input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.power-switcher-1 {
+  /*область, привязанная к input-radio (нажимая сюда, выбираем radio 1)*/
+  cursor: pointer;
+  width: 100%;
+  height: 50%;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #242582; */
+  /* = border*/
+}
+
+.i {
+  font-size: 17px;
+  color: rgb(205, 205, 205);
+}
+
+.power-switcher-2 {
+  /*область, привязанная к input-radio (нажимая сюда, выбираем radio 2)*/
+  cursor: pointer;
+  width: 100%;
+  height: 50%;
+  top: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.o {
+  font-size: 40px;
+  font-weight: lighter;
+  height: 20px;
+  color: rgb(205, 205, 205);
+}
+
+.power-switcher-label {
+  /* для всех привязаных областей задаём способ отображения */
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+}
+
+.power-switcher-slider {
+  /*начальный бэкграунд*/
+  height: 100%;
+  width: 100%;
+  background-color: rgb(175, 53, 0);
+  border-radius: 1px;
+  border: 10px solid rgb(15, 15, 15);
+  padding: 2%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1) inset, 0 0 4px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 1px rgba(0, 0, 0, 0.3) inset;
+  transition: background-color 0.2s linear 0s;
+}
+
+.power-switcher-radio-1:checked~.power-switcher-slider {
+  background-color: rgb(241, 72, 0);
+}
+
+.power-switcher-radio-2:checked~.power-switcher-slider {
+  background-color: rgb(175, 53, 0);
+}
+
+.power-switcher-radio-1:checked~.power-switcher-slider:after {
+  top: 20%;
+  margin-top: 2px;
+}
+
+.power-switcher-radio-2:checked~.power-switcher-slider:after {
+  top: 66.6%;
+  margin-top: 5px;
+
+}
+
+/*_______________________________________________________________________
+  *************************************************************************
+  *************************************************************************
+                                  CANVAS
+  *************************************************************************
+  *************************************************************************
+  _______________________________________________________________________*/
+
+.canvas_slot {
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 25%;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  z-index: 4;
+  bottom: 5px;
+  left: 120px;
+}
+
+.pushka_img {
+  position: absolute;
+  width: 100px;
+  z-index: 5;
+  bottom: 0;
+  margin-left: 288px;
+  margin-bottom: 25px;
+}
+
+
+.sphere_img {
+  position: absolute;
+  width: 450px;
+  z-index: 6;
+  bottom: 5px;
+  left: 120px;
+}
+
+/*горизонтальная*/
+.lineyka_img1 {
+  position: absolute;
+  width: 823px;
+  z-index: 10;
+  bottom: -7px;
+  margin-left: 287px;
+}
+
+.bok1 {
+  position: absolute;
+  z-index: 11;
+  bottom: -7px;
+  left: 245px;
+  height: 80px;
+}
+
+.bok2 {
+  position: absolute;
+  z-index: 11;
+  bottom: -7px;
+  right: 245px;
+  height: 80px;
+}
+
+/*вертикальная*/
+.lineyka_img2 {
+  position: absolute;
+  width: 600px;
+  z-index: 6;
+  transform: rotate(-90deg);
+  bottom: 150px;
+  right: -250px;
+
+}
+
+#light {
+  position: absolute;
+  width: 25px;
+  z-index: 5;
+  bottom: 75px;
+  left: 293px;
+  opacity: 0;
+}

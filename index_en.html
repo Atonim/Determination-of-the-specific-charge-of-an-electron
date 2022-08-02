@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normilise.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Determination of the specific charge of an electron</title>
+</head>
+
+<body class="all">
+    <header class="header">
+        <div class="grid_container">
+            <div class="grid_item">
+                <div class="grid_item_kaf">
+                    <img src="img/logokaf_en.png" alt="kaf_circle" class="kaf_circle">
+                </div>
+                <div class="grid_item_button">
+                    <input class="prog_info_button" id="prog_info_button" type="checkbox">
+                    <label class="prog_info_button_label" for="prog_info_button">Instruction</label>
+                    <div class="prog-info-inf">
+                        <p>
+                        <h4>Instructions for working with the program:</h4>
+                        To start the installation, click <br>
+                        on the top of the "POWER" button (the button will light up) <br>
+                        and let the unit warm up for 2-4 minutes.<br>
+                        <br>
+                        To change the position of the toggle switches<br>
+                        click on the field where you want to move the slider,<br>
+                        or a word describing the desired value.<br>
+                        <br>
+                        Move sliders to change values of<br>
+                        deflection voltage, accelerating voltage<br>
+                        and current strength.
+                        </p>
+                        <p>
+                        <h4>Developers:</h4>
+                        Efremov Artem and Deshura Dmitry (FCTI) <br>
+                        The program was developed under the supervision of Ph.D. <br>
+                        Associate Professor of the Physics Department<br>
+                        Ilya Lvovich Sheinman.<br> </p>
+                        <h4>Saint Petersburg <br>
+                            Electrotechnical <br>
+                            University ETU "LETI"</h4>
+                    </div>
+
+                </div>
+            </div>
+            <div class="grid_item">
+                <h1>Research of the movement of charged <br>particles in electric and magnetic fields and the determination<br> of the specific charge of an electron</h1>
+            </div>
+            <div class="grid_item">
+                <div class="right_bar">
+                    <img src="img/logo-krug-gold-en.png" alt="ETU_circle" class="ETU_circle">
+                    <div class="lang">
+                        <a href="index_ru.html"><h2 class="lang_ru">Рус</h2></a>
+                        <a href=""><h2 class="lang_eng">Eng</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--
+    _______________________________________________________________________
+                                    MAIN
+    _______________________________________________________________________
+-->
+
+    <main class="main_background">
+        <div class="aside"></div>
+        <div class="installation">
+            <div class="dome">
+                <svg class="helmholtz_coil">
+                    <defs>
+                        <radialGradient id="RadialGradient1">
+                            <stop offset="0" stop-color=#126bc2 />
+                            <stop offset="92%" stop-color=#0a112b />
+                            <stop offset="93%" stop-color="whitesmoke" />
+                            <stop offset="100%" stop-color="whitesmoke" />
+                        </radialGradient>
+                    </defs>
+                    <circle class="helmholtz" cx="50%" cy="70%" r="450px"> </circle>
+
+                </svg>
+                <img src="img/bok1.png" alt="square1" class="bok1">
+                <img src="img/lineyka28.png" alt="linyeka" class="lineyka_img1">
+                <img src="img/bok2.png" alt="square2" class="bok2">
+                <div class="canvas_slot">
+                    <img src="img/ANNIGILATORNAYA PUSHKA.png" alt="pushka" class="pushka_img">
+                    <img src="img/light.png" alt="light" id="light">
+                    <img src="img/sphere.png" alt="sphere" class="sphere_img">
+
+                    <img src="img/lineyka20obr.png" alt="lineyka" class="lineyka_img2">
+                    <canvas class="canvas" width="450" height="450"></canvas>
+                </div>
+
+            </div>
+            <div class="background">
+                <div class="back_dashboard">
+                    <div class="grid_dashboard">
+                        <div class="dashboard_left_panel_voltbutton grid_dashboard_item">
+                            <h2 class="dashboard_h mousedownoff">Deflecting voltage</h2>
+                            <div class="container">
+                                <div class="deflecting_voltage_switch_labels">
+                                    <div class="switcher-label-vis"><label class="switcher-1"
+                                            for="position-1">POSITIVE</label></div>
+                                    <div class="switcher-label-vis"><label class="switcher-2"
+                                            for="position-2">OFF</label>
+                                    </div>
+                                    <div class="switcher-label-vis"><label class="switcher-3"
+                                            for="position-3">NEGATIVE</label></div>
+                                </div>
+                                <div class="deflecting_voltage_switch">
+                                    <label class="switcher-label switcher-1" for="position-1">ПОЛОЖИТЕЛЬНОЕ</label>
+                                    <input class="switcher-radio-1" id="position-1" type="radio" name="switch-voltage"
+                                        value="ПОЛОЖИТЕЛЬНОЕ">
+
+                                    <label class="switcher-label switcher-2" for="position-2">ВЫКЛ</label>
+                                    <input class="switcher-radio-2" id="position-2" type="radio" name="switch-voltage"
+                                        value="ВЫКЛ">
+
+                                    <label class="switcher-label switcher-3" for="position-3">ОТРИЦАТЕЛЬНОЕ</label>
+                                    <input class="switcher-radio-3" id="position-3" type="radio" name="switch-voltage"
+                                        value="ОТРИЦАТЕЛЬНОЕ">
+                                    <div class="switcher-slider"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard_central_panel_img grid_dashboard_item">
+                            <img src="img/Voltmetr.jpg" alt="volt_img" class="volt_img">
+                            <svg class="meter">
+                                <polygon class="meter-clock1" points="150,185 160,45 170,185"></polygon>
+                                <ellipse class="meter-circle1" cx="160" cy="145" rx="90" ry="25"></ellipse>
+                            </svg>
+                        </div>
+                        <div class="dashboard_right_panel_img grid_dashboard_item">
+                            <img src="img/Ampermetr.jpg" alt="amp_img" class="amp_img">
+                            <svg class="meter">
+                                <polygon class="meter-clock2" points="150,185 160,45 170,185"></polygon>
+                                <ellipse class="meter-circle2" cx="160" cy="145" rx="90" ry="25"></ellipse>
+                            </svg>
+                        </div>
+                        <div class="dashboard_power_panel_amperbutton grid_dashboard_item">
+
+                            <h2 class="dashboard_h mousedownoff">Current direction</h2>
+                            <div class="container">
+                                <div class="amperage_direction_switch">
+                                    <label class="switcher-label switcher-1"
+                                        for="amperage-position-1">ПОЛОЖИТЕЛЬНОЕ</label>
+                                    <input class="switcher-radio-1" id="amperage-position-1" type="radio"
+                                        name="switch-amperage" value="ПОЛОЖИТЕЛЬНОЕ">
+
+                                    <label class="switcher-label switcher-2" for="amperage-position-2">ВЫКЛ</label>
+                                    <input class="switcher-radio-2" id="amperage-position-2" type="radio"
+                                        name="switch-amperage" value="ВЫКЛ">
+
+                                    <label class="switcher-label switcher-3"
+                                        for="amperage-position-3">ОТРИЦАТЕЛЬНОЕ</label>
+                                    <input class="switcher-radio-3" id="amperage-position-3" type="radio"
+                                        name="switch-amperage" value="ОТРИЦАТЕЛЬНОЕ">
+                                    <div class="switcher-slider"></div>
+                                </div>
+                                <div class="deflecting_voltage_switch_labels">
+                                    <div class="switcher-label-vis"><label class="switcher-1"
+                                            for="amperage-position-1">CLOCKWISE</label></div>
+                                    <div class="switcher-label-vis"><label class="switcher-2"
+                                            for="amperage-position-2">OFF</label></div>
+                                    <div class="switcher-label-vis"><label class="switcher-3"
+                                            for="amperage-position-3">COUNTERCLOCKWISE</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard_left_panel_runner grid_dashboard_item">
+                            <div>
+                                <div class="white_line"></div>
+                                <input id="range3" class="slider" type="range" min="0" max="250" value="0" step="1">
+                                <ul class="range_labels">
+                                    <li>
+                                        <h2 class="dashboard_h mousedownoff" style="margin-top:10px;">0V</h2>
+                                    </li>
+                                    <li>
+                                        <h2 class="dashboard_h mousedownoff" style="margin-top:10px;">250V</h2>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <div class="dashboard_central_panel_runner grid_dashboard_item">
+                            <div>
+                                <div class="white_line"></div>
+                                <input id="range1" class="slider" type="range" min="0" max="250" value="0" step="1">
+                                <h2 class="dashboard_h mousedownoff" style="margin-top:10px;">Accelerating voltage</h2>
+                            </div>
+
+                        </div>
+                        <div class="dashboard_right_panel_runner grid_dashboard_item">
+                            <div>
+                                <div class="white_line"></div>
+                                <input id="range2" class="slider" type="range" min="0" max="300" value="0" step="1">
+                                <h2 class="dashboard_h mousedownoff" style="margin-top:10px;">Coil current</h2>
+                            </div>
+
+                        </div>
+                        <div class="dashboard_power_panel_powerbutton grid_dashboard_item">
+                            <div class="power_switch">
+                                <label class="power-switcher-label power-switcher-1" for="power-position-1">
+                                    <p class="i">|</p>
+                                </label>
+                                <input class="power-switcher-radio-1 power" id="power-position-1" type="radio"
+                                    name="switch-power" value="ON">
+
+                                <label class="power-switcher-label power-switcher-2" for="power-position-2">
+                                    <p class="o">°</p>
+                                </label>
+                                <input class="power-switcher-radio-2 power" id="power-position-2" type="radio" checked
+                                    name="switch-power" value="OFF">
+                                <div class="power-switcher-slider"></div>
+                            </div>
+                            <h2 class="power_dashboard_h mousedownoff">Power</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
